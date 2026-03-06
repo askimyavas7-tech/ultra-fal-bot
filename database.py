@@ -1,0 +1,10 @@
+from motor.motor_asyncio import AsyncIOMotorClient
+from config import MONGO_URI
+
+client = AsyncIOMotorClient(MONGO_URI)
+
+db = client["falbot"]
+
+users = db["users"]
+premium = db["premium"]
+history = db["history"]
